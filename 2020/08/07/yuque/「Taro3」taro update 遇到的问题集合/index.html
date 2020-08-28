@@ -185,12 +185,22 @@
                         </span>
                     
                     
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/React/">React</a>
+                            
+                                <a href="/categories/React/Taro/">Taro</a>
+                            
+                        </span>
+                    
                 </div>
             
         </header>
 
         <div class="post-content">
-            <h3 id="1-Super-expression-must-either-be-null-or-a-function-TypeError-Super-expression-must-either-be-null-or-a-function"><a href="#1-Super-expression-must-either-be-null-or-a-function-TypeError-Super-expression-must-either-be-null-or-a-function" class="headerlink" title="1.Super expression must either be null or a function, TypeError: Super expression must either be null or a function"></a>1.Super expression must either be null or a function, TypeError: Super expression must either be null or a function</h3><p>在 Taro Next 中，属于框架本身的 API 从框架自己的包中引入，其它的 API 仍然从 <code>@tarojs/taro</code> 引入。使用哪个框架来进行开发完全由开发者来决定。</p>
+            <a id="more"></a>
+<h3 id="1-Super-expression-must-either-be-null-or-a-function-TypeError-Super-expression-must-either-be-null-or-a-function"><a href="#1-Super-expression-must-either-be-null-or-a-function-TypeError-Super-expression-must-either-be-null-or-a-function" class="headerlink" title="1.Super expression must either be null or a function, TypeError: Super expression must either be null or a function"></a>1.Super expression must either be null or a function, TypeError: Super expression must either be null or a function</h3><p>在 Taro Next 中，属于框架本身的 API 从框架自己的包中引入，其它的 API 仍然从 <code>@tarojs/taro</code> 引入。使用哪个框架来进行开发完全由开发者来决定。</p>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Taro <span class="keyword">from</span> <span class="string">"@tarojs/taro"</span>;</span><br><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>; <span class="comment">// Component 是来自于 React 的 API</span></span><br></pre></td></tr></table></figure>
 <h3 id="2-当前页面路由参数"><a href="#2-当前页面路由参数" class="headerlink" title="2. 当前页面路由参数"></a>2. 当前页面路由参数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.params; <span class="comment">// old</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Taro, &#123; getCurrentInstance &#125; <span class="keyword">from</span> <span class="string">"@tarojs/taro"</span>;</span><br><span class="line">current = getCurrentInstance();</span><br><span class="line"><span class="keyword">this</span>.current.router.params; <span class="comment">// new</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-使用原生微信第三方组件"><a href="#3-使用原生微信第三方组件" class="headerlink" title="3. 使用原生微信第三方组件"></a>3. 使用原生微信第三方组件</h3><p>如：ec-canvas<br>在 Taro v1.3 内：</p>
@@ -240,6 +250,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/Taro/"># Taro</a>
+                    
+                        
                 </span>
             </div>
             <div>

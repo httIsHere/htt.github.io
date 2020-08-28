@@ -123,12 +123,20 @@
                         </span>
                     
                     
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Daily/">Daily</a>
+                            
+                        </span>
+                    
                 </div>
             
         </header>
 
         <div class="post-content">
-            <ol>
+            <a id="more"></a>
+<ol>
 <li>周选择器 element-ui</li>
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-date-picker</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"week_choice"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">type</span>=<span class="string">"week"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">format</span>=<span class="string">"yyyy 第 WW 周"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">placeholder</span>=<span class="string">"选择周"</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">el-date-picker</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -137,7 +145,11 @@
 <li>自然周从周一开始  <code>:picker-options=&quot;{&#39;firstDayOfWeek&#39;: 1}&quot;</code></li>
 </ul>
 <p><img src="https://cdn.nlark.com/yuque/0/2020/png/250093/1589943430188-3a6a9715-59ea-4b83-8387-d264d964318c.png#align=left&amp;display=inline&amp;height=292&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=872&amp;originWidth=1776&amp;size=153405&amp;status=done&amp;style=none&amp;width=595" alt="image.png"></p>
-<p>2.</p>
+<ol start="2">
+<li>垂直方向经常会出现 margin 重叠的问题</li>
+<li>less 内数组循环索引是从 1 开始</li>
+</ol>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tag background-color</span></span><br><span class="line"><span class="comment">// @tag-color-list is a array</span></span><br><span class="line"><span class="variable">@tag-color-list:</span> <span class="number">#fa871c</span>, <span class="number">#5ac265</span>, <span class="number">#fe6c91</span>, <span class="number">#a554af</span>, <span class="number">#9690fc</span>, <span class="number">#409fff</span>, <span class="number">#ffd300</span>,</span><br><span class="line">  <span class="number">#4cd1d3</span>, <span class="number">#3d36c5</span>;</span><br><span class="line"><span class="selector-class">.tagBgColorLoop</span>(<span class="variable">@i</span>, <span class="variable">@tag-color-list</span>) <span class="keyword">when</span>(<span class="variable">@i</span> &lt; length(<span class="variable">@tag-color-list</span>)) &#123;</span><br><span class="line">  <span class="selector-class">.item-course-color-tag-</span><span class="variable">@&#123;i&#125;</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: extract(<span class="variable">@tag-color-list</span>, <span class="variable">@i</span>+<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-class">.tagBgColorLoop</span>(<span class="variable">@i</span> + <span class="number">1</span>, <span class="variable">@tag-color-list</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tagBgColorLoop</span>(<span class="number">0</span>, <span class="variable">@tag-color-list</span>);</span><br></pre></td></tr></table></figure>
 
         </div>
 
