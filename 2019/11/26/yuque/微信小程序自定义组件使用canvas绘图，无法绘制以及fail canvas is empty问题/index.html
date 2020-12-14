@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="referrer" content="no-referrer" />
 
     <meta name="author" content="httishere">
 
@@ -42,7 +44,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -119,14 +121,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">November 26, 2019&nbsp;&nbsp;11:55:10</a>
+                        Date: <a href="#">十一月 26, 2019&nbsp;&nbsp;11:55:10</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/微信小程序/">微信小程序</a>
+                                <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
                             
                         </span>
                     
@@ -136,10 +138,11 @@
 
         <div class="post-content">
             <a id="more"></a>
+
 <p>情况 1：普通页面，canvas 绘制，正常，生成图片正常；</p>
-<p>情况 2：自定义组件引用 canvas 绘制，空白；<br>原因：查看文档，在自定义组件内需要手动传入当前实例的 this，否则 canvas 指向的 this 为父组件所以无法找到正确 canvas；<br><img src="https://cdn.nlark.com/yuque/0/2019/png/250093/1574740757955-44eee736-554f-4bb3-a6a9-9cb1f1bc6e1f.png#align=left&amp;display=inline&amp;height=351&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=351&amp;originWidth=885&amp;size=39059&amp;status=done&amp;style=none&amp;width=885" alt="image.png"></p>
-<p>情况 3：自定义组件内，canvas 绘制好了，但是<code>canvasToTempFilePath</code>报 fail canvas is empty 错误；<br>原因：同上，但是 canvasToTempFilePath({}, this)添加 this 可能无法解决，因为我使用的小程序框架是 Taro，在 Taro 的页面和组件类中，this 指向的是 Taro 页面或组件实例。<br>所以一般我们需要获取 Taro 的页面和组件所对应的小程序原生页面和组件实例，这个时候我们可以通过 this.\$scope 访问到它们；<br>所以最后写成：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Taro.createCanvasContext(<span class="string">"canvas-id"</span>, <span class="keyword">this</span>.$scope);</span><br><span class="line">Taro.canvasToTempFilePath(&#123;&#125;, <span class="keyword">this</span>.$scope);</span><br></pre></td></tr></table></figure>
+<p>情况 2：自定义组件引用 canvas 绘制，空白；<br>原因：查看文档，在自定义组件内需要手动传入当前实例的 this，否则 canvas 指向的 this 为父组件所以无法找到正确 canvas；<br><img src="https://cdn.nlark.com/yuque/0/2019/png/250093/1574740757955-44eee736-554f-4bb3-a6a9-9cb1f1bc6e1f.png#align=left&display=inline&height=351&margin=%5Bobject%20Object%5D&name=image.png&originHeight=351&originWidth=885&size=39059&status=done&style=none&width=885" alt="image.png"></p>
+<p>情况 3：自定义组件内，canvas 绘制好了，但是<code>canvasToTempFilePath</code>报 fail canvas is empty 错误；<br>原因：同上，但是 canvasToTempFilePath({}, this)添加 this 可能无法解决，因为我使用的小程序框架是 Taro，在 Taro 的页面和组件类中，this 指向的是 Taro 页面或组件实例。<br>所以一般我们需要获取 Taro 的页面和组件所对应的小程序原生页面和组件实例，这个时候我们可以通过 this.$scope 访问到它们；<br>所以最后写成：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Taro.createCanvasContext(<span class="string">&quot;canvas-id&quot;</span>, <span class="built_in">this</span>.$scope);</span><br><span class="line">Taro.canvasToTempFilePath(&#123;&#125;, <span class="built_in">this</span>.$scope);</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -154,13 +157,13 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://httishere.github.io/2019/11/26/yuque/微信小程序自定义组件使用canvas绘图，无法绘制以及fail canvas is empty问题/">https://httishere.github.io/2019/11/26/yuque/微信小程序自定义组件使用canvas绘图，无法绘制以及fail canvas is empty问题/</a></span>
+                        <span><a href="https://httishere.github.io/2019/11/26/yuque/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8canvas%E7%BB%98%E5%9B%BE%EF%BC%8C%E6%97%A0%E6%B3%95%E7%BB%98%E5%88%B6%E4%BB%A5%E5%8F%8Afail%20canvas%20is%20empty%E9%97%AE%E9%A2%98/">https://httishere.github.io/2019/11/26/yuque/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8canvas%E7%BB%98%E5%9B%BE%EF%BC%8C%E6%97%A0%E6%B3%95%E7%BB%98%E5%88%B6%E4%BB%A5%E5%8F%8Afail%20canvas%20is%20empty%E9%97%AE%E9%A2%98/</a></span>
                     </p>
                 
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
@@ -191,10 +194,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/01/04/yuque/2019总结，2020要开心/">2019总结，2020要开心</a>
+                <a class="prev" rel="prev" href="/2020/01/04/yuque/2019%E6%80%BB%E7%BB%93%EF%BC%8C2020%E8%A6%81%E5%BC%80%E5%BF%83/">2019总结，2020要开心</a>
             
             
-            <a class="next" rel="next" href="/2019/06/05/yuque/mpvue 引入第三方UI组件库/">mpvue 引入第三方UI组件库</a>
+            <a class="next" rel="next" href="/2019/06/05/yuque/mpvue%20%E5%BC%95%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9UI%E7%BB%84%E4%BB%B6%E5%BA%93/">mpvue 引入第三方UI组件库</a>
             
         </section>
 

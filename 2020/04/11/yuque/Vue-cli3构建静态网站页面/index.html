@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="referrer" content="no-referrer" />
 
     <meta name="author" content="httishere">
 
@@ -42,7 +44,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -119,7 +121,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">April 11, 2020&nbsp;&nbsp;14:44:41</a>
+                        Date: <a href="#">四月 11, 2020&nbsp;&nbsp;14:44:41</a>
                         </span>
                     
                     
@@ -132,16 +134,18 @@
 <li>请求本地 json 数据</li>
 </ol>
 <p>在 vue-cli3 中，存放静态资源的位置在 public 文件夹内，所以需要在项目根目录下创建 public 文件，并存放相应的 json 文件，然后使用 axios 进行请求。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$axios.get(<span class="string">"/api/info-card.json"</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.$axios.get(<span class="string">&quot;/api/info-card.json&quot;</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>vue cli3 UI 控制台</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue ui</span><br></pre></td></tr></table></figure>
+
 <ol start="3">
 <li>全局使用 less 变量</li>
 </ol>
 <p>使用 <code>style-resources-loader</code>，在 vue.config.js 内：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pluginOptions: &#123;</span><br><span class="line">  'style-resources-loader': &#123;</span><br><span class="line">    preProcessor: 'less',</span><br><span class="line">    patterns: [path.resolve(__dirname, './src/theme/global.less')]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pluginOptions: &#123;</span><br><span class="line">  &#x27;style-resources-loader&#x27;: &#123;</span><br><span class="line">    preProcessor: &#x27;less&#x27;,</span><br><span class="line">    patterns: [path.resolve(__dirname, &#x27;./src/theme/global.less&#x27;)]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -156,13 +160,13 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://httishere.github.io/2020/04/11/yuque/Vue-cli3构建静态网站页面/">https://httishere.github.io/2020/04/11/yuque/Vue-cli3构建静态网站页面/</a></span>
+                        <span><a href="https://httishere.github.io/2020/04/11/yuque/Vue-cli3%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E9%A1%B5%E9%9D%A2/">https://httishere.github.io/2020/04/11/yuque/Vue-cli3%E6%9E%84%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E9%A1%B5%E9%9D%A2/</a></span>
                     </p>
                 
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
@@ -189,10 +193,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/04/13/yuque/Less 记录/">Less 记录</a>
+                <a class="prev" rel="prev" href="/2020/04/13/yuque/Less%20%E8%AE%B0%E5%BD%95/">Less 记录</a>
             
             
-            <a class="next" rel="next" href="/2020/03/27/yuque/no such file or directory, scandir '...!node_modules!node-sass!vendor/">no such file or directory, scandir &#39;...\node_modules\node-sass\vendor</a>
+            <a class="next" rel="next" href="/2020/03/27/yuque/no%20such%20file%20or%20directory,%20scandir%20'...!node_modules!node-sass!vendor/">no such file or directory, scandir &#39;...\node_modules\node-sass\vendor</a>
             
         </section>
 

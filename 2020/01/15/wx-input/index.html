@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="referrer" content="no-referrer" />
 
     <meta name="author" content="httishere">
 
@@ -42,7 +44,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -119,14 +121,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 15, 2020&nbsp;&nbsp;9:19:12</a>
+                        Date: <a href="#">一月 15, 2020&nbsp;&nbsp;9:19:12</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/微信小程序/">微信小程序</a>
+                                <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
                             
                         </span>
                     
@@ -140,13 +142,14 @@
 <p>获取焦点后：<br><img src="https://upload-images.jianshu.io/upload_images/6080416-bbb25ecc107a5c47.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="focus"></p>
 <p>微信官方提供了一个<code>adjustPosition</code>属性, 键盘弹起时，是否自动上推页面.</p>
 <p>将<code>input</code>的<code>adjust-position</code>设为<code>false</code>之后, 弹出软键盘后页面不会上移, 但是会导致输入框被软键盘覆盖.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">className</span>=<span class="string">"barrage-input"</span> <span class="attr">adjustPosition</span>=<span class="string">"&#123;false&#125;"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">className</span>=<span class="string">&quot;barrage-input&quot;</span> <span class="attr">adjustPosition</span>=<span class="string">&quot;&#123;false&#125;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://upload-images.jianshu.io/upload_images/6080416-55f0fa43775a3ffd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="adjust-position"></p>
 <p>所以需要通过输入框获得焦点, 失去焦点以及软键盘高度变化时获取软键盘高度对<code>input</code>位置进行手动设置.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">View</span></span></span><br><span class="line"><span class="tag">  <span class="attr">className</span>=<span class="string">&#123;[</span>"<span class="attr">barrage-bar</span>", <span class="attr">keyboard_height</span> ? "<span class="attr">untouch-bottom</span>" <span class="attr">:</span> ""]&#125;</span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">&#123;&#123;</span> <span class="attr">bottom:</span> <span class="attr">keyboard_height</span> + "<span class="attr">px</span>" &#125;&#125;</span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">View</span> <span class="attr">className</span>=<span class="string">"barrage-bar-inner"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Input</span></span></span><br><span class="line"><span class="tag">      <span class="attr">className</span>=<span class="string">"barrage-input"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">value</span>=<span class="string">&#123;input_msg&#125;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">placeholder</span>=<span class="string">"有疑问？弹幕问老师..."</span></span></span><br><span class="line"><span class="tag">      <span class="attr">placeholderStyle</span>=<span class="string">"color:#999999;"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">adjustPosition</span>=<span class="string">&#123;false&#125;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">onInput</span>=<span class="string">&#123;this.inputMsgChange.bind(this)&#125;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">onFocus</span>=<span class="string">&#123;this.inputFocus.bind(this)&#125;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">onBlur</span>=<span class="string">&#123;this.inputBlur.bind(this)&#125;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">onKeyboardHeightChange</span>=<span class="string">&#123;this.keyboardHeightChange.bind(this)&#125;</span></span></span><br><span class="line"><span class="tag">    &gt;</span><span class="tag">&lt;/<span class="name">Input</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">View</span></span></span><br><span class="line"><span class="tag">      <span class="attr">className</span>=<span class="string">&#123;[</span>"<span class="attr">btn</span> <span class="attr">btn-send</span>", <span class="attr">input_msg.length</span> ? "<span class="attr">btn-can-send</span>" <span class="attr">:</span> ""]&#125;</span></span><br><span class="line"><span class="tag">      <span class="attr">onClick</span>=<span class="string">&#123;this.sendMessageOnPage.bind(this)&#125;</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">      发送</span><br><span class="line">    <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">inputFocus(e) &#123;</span><br><span class="line">  <span class="comment">// 输入框获取焦点, 通过软键盘高度设置输入框位置</span></span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    keyboard_height: e.detail.height</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">inputBlur(e) &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    keyboard_height: <span class="number">0</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">keyboardHeightChange(e) &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    keyboard_height: e.detail.height</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最终:<br><img src="https://upload-images.jianshu.io/upload_images/6080416-7ee8dca6ada06335.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6080416-f921dac1f7f705dd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;View</span><br><span class="line">  className=&#123;[&quot;barrage-bar&quot;, keyboard_height ? &quot;untouch-bottom&quot; : &quot;&quot;]&#125;</span><br><span class="line">  style=&#123;&#123; bottom: keyboard_height + &quot;px&quot; &#125;&#125;</span><br><span class="line">&gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">View</span> <span class="attr">className</span>=<span class="string">&quot;barrage-bar-inner&quot;</span>&gt;</span></span><br><span class="line">    &lt;Input</span><br><span class="line">      className=&quot;barrage-input&quot;</span><br><span class="line">      value=&#123;input_msg&#125;</span><br><span class="line">      placeholder=&quot;有疑问？弹幕问老师...&quot;</span><br><span class="line">      placeholderStyle=&quot;color:#999999;&quot;</span><br><span class="line">      adjustPosition=&#123;false&#125;</span><br><span class="line">      onInput=&#123;this.inputMsgChange.bind(this)&#125;</span><br><span class="line">      onFocus=&#123;this.inputFocus.bind(this)&#125;</span><br><span class="line">      onBlur=&#123;this.inputBlur.bind(this)&#125;</span><br><span class="line">      onKeyboardHeightChange=&#123;this.keyboardHeightChange.bind(this)&#125;</span><br><span class="line">    &gt;<span class="tag">&lt;/<span class="name">Input</span>&gt;</span></span><br><span class="line">    &lt;View</span><br><span class="line">      className=&#123;[&quot;btn btn-send&quot;, input_msg.length ? &quot;btn-can-send&quot; : &quot;&quot;]&#125;</span><br><span class="line">      onClick=&#123;this.sendMessageOnPage.bind(this)&#125;</span><br><span class="line">    &gt;</span><br><span class="line">      发送</span><br><span class="line">    <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">View</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">inputFocus</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">  <span class="comment">// 输入框获取焦点, 通过软键盘高度设置输入框位置</span></span><br><span class="line">  <span class="built_in">this</span>.setState(&#123;</span><br><span class="line">    keyboard_height: e.detail.height</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">inputBlur</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.setState(&#123;</span><br><span class="line">    keyboard_height: <span class="number">0</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">keyboardHeightChange</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.setState(&#123;</span><br><span class="line">    keyboard_height: e.detail.height</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最终:<br><img src="https://upload-images.jianshu.io/upload_images/6080416-7ee8dca6ada06335.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6080416-f921dac1f7f705dd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
 
         </div>
 
@@ -167,7 +170,7 @@
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
@@ -187,7 +190,7 @@
                     
                         <a href="/tags/wx/"># wx</a>
                     
-                        <a href="/tags/微信开发/"># 微信开发</a>
+                        <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/"># 微信开发</a>
                     
                         
                 </span>
@@ -200,7 +203,7 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/02/02/yuque/Windows环境下docker配置安装/">Windows环境下docker配置安装</a>
+                <a class="prev" rel="prev" href="/2020/02/02/yuque/Windows%E7%8E%AF%E5%A2%83%E4%B8%8Bdocker%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85/">Windows环境下docker配置安装</a>
             
             
             <a class="next" rel="next" href="/2020/01/12/re-css_01/">重看css 01</a>

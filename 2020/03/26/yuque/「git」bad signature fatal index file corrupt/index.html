@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="referrer" content="no-referrer" />
 
     <meta name="author" content="httishere">
 
@@ -42,7 +44,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -119,7 +121,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">March 26, 2020&nbsp;&nbsp;11:20:14</a>
+                        Date: <a href="#">三月 26, 2020&nbsp;&nbsp;11:20:14</a>
                         </span>
                     
                     
@@ -131,12 +133,14 @@
             <p>tags: [git, error]<br>categories: [error]<br>cover:</p>
 <hr>
 <a id="more"></a>
+
 <p>在 commit 过程中，电脑突然蓝屏，之后开机打开电脑 sourcetree 就出现了这个报错问题。</p>
 <p><strong>原因</strong>：</p>
 <p>因为 git 在更新操作的时候会更新.git 文件夹下的 index 文件，方便下一次更新的时候会找到更新的节点，而电脑突然崩溃，这个文件可能只更新了一部分，甚至直接导致这个文件破坏，所以再次更新的时候，发现这个 index 文件信息不全或者文件无法读取。</p>
 <p><strong>解决办法：</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rm -f .git/index    // 删除文件index，也可以手动删除</span><br><span class="line">$ git reset       //这个是git命名可以恢复指定的版本号，这里没有就默认恢复上一次正确的文件</span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/hy_coming/article/details/84099105" target="_blank" rel="noopener">原文章参考</a></p>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hy_coming/article/details/84099105">原文章参考</a></p>
 
         </div>
 
@@ -151,13 +155,13 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://httishere.github.io/2020/03/26/yuque/「git」bad signature fatal index file corrupt/">https://httishere.github.io/2020/03/26/yuque/「git」bad signature fatal index file corrupt/</a></span>
+                        <span><a href="https://httishere.github.io/2020/03/26/yuque/%E3%80%8Cgit%E3%80%8Dbad%20signature%20fatal%20index%20file%20corrupt/">https://httishere.github.io/2020/03/26/yuque/%E3%80%8Cgit%E3%80%8Dbad%20signature%20fatal%20index%20file%20corrupt/</a></span>
                     </p>
                 
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
@@ -184,7 +188,7 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/03/26/yuque/React Native 踩坑记/">React Native 踩坑记</a>
+                <a class="prev" rel="prev" href="/2020/03/26/yuque/React%20Native%20%E8%B8%A9%E5%9D%91%E8%AE%B0/">React Native 踩坑记</a>
             
             
             <a class="next" rel="next" href="/2020/03/24/taro-mult-dev/">Taro 多端开发</a>

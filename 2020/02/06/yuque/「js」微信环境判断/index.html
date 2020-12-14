@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
-<head><meta name="generator" content="Hexo 3.8.0">
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="referrer" content="no-referrer" />
 
     <meta name="author" content="httishere">
 
@@ -42,7 +44,7 @@
     
 
 
-</head>
+<meta name="generator" content="Hexo 5.2.0"></head>
 <body>
     <div class="wrapper">
         <header>
@@ -119,7 +121,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">February 6, 2020&nbsp;&nbsp;11:10:23</a>
+                        Date: <a href="#">二月 6, 2020&nbsp;&nbsp;11:10:23</a>
                         </span>
                     
                     
@@ -131,9 +133,11 @@
             <p>tags: [js, wx]<br>categories: [js]<br>cover:</p>
 <hr>
 <a id="more"></a>
+
 <p>通过对 user-agent 参数包含的信息进行判断：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> is_wechat = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> ua = <span class="built_in">window</span>.navigator.userAgent.toLowerCase();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    ua.match(<span class="regexp">/MicroMessenger/i</span>) == <span class="string">"micromessenger"</span> ||</span><br><span class="line">    ua.match(<span class="regexp">/_SQ_/i</span>) == <span class="string">"_sq_"</span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>问题：<br>在 QQ 内打开相关页面，user-agent 参数如下其中包括<code>_sq_</code>，所以在 QQ 内会识别成微信环境。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/250093/1580959388940-8a1c0ff3-5688-4d0b-af7b-fdcf5e05bc18.png#align=left&amp;display=inline&amp;height=180&amp;margin=%5Bobject%20Object%5D&amp;name=image.png&amp;originHeight=360&amp;originWidth=828&amp;size=299978&amp;status=done&amp;style=none&amp;width=414" alt="image.png"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> is_wechat = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> ua = <span class="built_in">window</span>.navigator.userAgent.toLowerCase();</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    ua.match(<span class="regexp">/MicroMessenger/i</span>) == <span class="string">&quot;micromessenger&quot;</span> ||</span><br><span class="line">    ua.match(<span class="regexp">/_SQ_/i</span>) == <span class="string">&quot;_sq_&quot;</span></span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>问题：<br>在 QQ 内打开相关页面，user-agent 参数如下其中包括<code>_sq_</code>，所以在 QQ 内会识别成微信环境。<br><img src="https://cdn.nlark.com/yuque/0/2020/png/250093/1580959388940-8a1c0ff3-5688-4d0b-af7b-fdcf5e05bc18.png#align=left&display=inline&height=180&margin=%5Bobject%20Object%5D&name=image.png&originHeight=360&originWidth=828&size=299978&status=done&style=none&width=414" alt="image.png"></p>
 
         </div>
 
@@ -148,13 +152,13 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://httishere.github.io/2020/02/06/yuque/「js」微信环境判断/">https://httishere.github.io/2020/02/06/yuque/「js」微信环境判断/</a></span>
+                        <span><a href="https://httishere.github.io/2020/02/06/yuque/%E3%80%8Cjs%E3%80%8D%E5%BE%AE%E4%BF%A1%E7%8E%AF%E5%A2%83%E5%88%A4%E6%96%AD/">https://httishere.github.io/2020/02/06/yuque/%E3%80%8Cjs%E3%80%8D%E5%BE%AE%E4%BF%A1%E7%8E%AF%E5%A2%83%E5%88%A4%E6%96%AD/</a></span>
                     </p>
                 
                 
                     <p class="copyright-item">
                         <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
                     </p>
                 
                 
@@ -181,10 +185,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/02/14/yuque/「Taro」Taro CLI 与本地安装运行时框架 @tarojs!taro-weapp 版本不一致/">「Taro」Taro CLI 与本地安装运行时框架 @tarojs/taro-weapp 版本不一致</a>
+                <a class="prev" rel="prev" href="/2020/02/14/yuque/%E3%80%8CTaro%E3%80%8DTaro%20CLI%20%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E8%BF%90%E8%A1%8C%E6%97%B6%E6%A1%86%E6%9E%B6%20@tarojs!taro-weapp%20%E7%89%88%E6%9C%AC%E4%B8%8D%E4%B8%80%E8%87%B4/">「Taro」Taro CLI 与本地安装运行时框架 @tarojs/taro-weapp 版本不一致</a>
             
             
-            <a class="next" rel="next" href="/2020/02/02/yuque/Windows环境下docker配置安装/">Windows环境下docker配置安装</a>
+            <a class="next" rel="next" href="/2020/02/02/yuque/Windows%E7%8E%AF%E5%A2%83%E4%B8%8Bdocker%E9%85%8D%E7%BD%AE%E5%AE%89%E8%A3%85/">Windows环境下docker配置安装</a>
             
         </section>
 
