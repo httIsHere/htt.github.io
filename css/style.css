@@ -940,6 +940,7 @@ header label {
 }
 .post-copyright .copyright-item {
   margin: 5px 0;
+  word-wrap: break-word;
 }
 .post-copyright .lincese {
   font-weight: bold;
