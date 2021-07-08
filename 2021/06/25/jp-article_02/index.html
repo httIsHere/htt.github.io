@@ -13,7 +13,7 @@
 
 
 
-<title>「日本語」 卒業文章 | HTTISHERE</title>
+<title>「日本語」 卒業文章（N5） | HTTISHERE</title>
 
 
 
@@ -112,7 +112,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">「日本語」 卒業文章</h1>
+            <h1 class="post-title">「日本語」 卒業文章（N5）</h1>
             
                 <div class="post-meta">
                     
@@ -204,7 +204,31 @@
             <a class="next" rel="next" href="/2021/05/26/yuque/%E3%80%8Cjs%E3%80%8DWeakMap%20&%20WeakSet/">「js」WeakMap &amp; WeakSet</a>
             
         </section>
-
+        
+            <div id="gitalk-container"></div>
+            <!--
+ * @Author: your name
+ * @Date: 2021-07-08 11:08:58
+ * @LastEditTime: 2021-07-08 11:09:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /hexo-yuque-blog/themes/Chic/layout/_partial/gitalk.ejs
+-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: 'c61a26564784a9cb16f3',
+        clientSecret: '25a391b4405c726bfa417a4d09a8a9d46fd41e12',
+        repo: 'httIsHere.github.io',
+        owner: 'httishere',
+        admin: 'httishere',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+        
 
     </article>
 </div>

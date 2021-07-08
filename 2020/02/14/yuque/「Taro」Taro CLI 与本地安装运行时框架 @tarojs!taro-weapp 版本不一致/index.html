@@ -208,7 +208,31 @@
             <a class="next" rel="next" href="/2020/02/06/yuque/%E3%80%8Cjs%E3%80%8D%E5%BE%AE%E4%BF%A1%E7%8E%AF%E5%A2%83%E5%88%A4%E6%96%AD/">「js」微信环境判断</a>
             
         </section>
-
+        
+            <div id="gitalk-container"></div>
+            <!--
+ * @Author: your name
+ * @Date: 2021-07-08 11:08:58
+ * @LastEditTime: 2021-07-08 11:09:51
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /hexo-yuque-blog/themes/Chic/layout/_partial/gitalk.ejs
+-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: 'c61a26564784a9cb16f3',
+        clientSecret: '25a391b4405c726bfa417a4d09a8a9d46fd41e12',
+        repo: 'httIsHere.github.io',
+        owner: 'httishere',
+        admin: 'httishere',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
+        
 
     </article>
 </div>
