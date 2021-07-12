@@ -48,62 +48,85 @@
 <body>
     <div class="wrapper">
         <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">HTTISHERE&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header header-logo">
+        <a href="/">HTTISHERE&#39;s Blog</a>
+      </div>
+      <div class="menu navbar-right">
+        
+        <a class="menu-item" href="/archives">Posts</a>
+        
+        <a class="menu-item" href="/category">Categories</a>
+        
+        <a class="menu-item" href="/tag">Tags</a>
+        
+        <a class="menu-item" href="/about">About</a>
+        
+        <input id="switch_default" type="checkbox" class="switch_default" />
+        <label for="switch_default" class="toggleBtn"></label>
+        <a
+          href="javascript:;"
+          rel="sidebar"
+          style="margin-left: 20px;"
+          onclick="addFav();"
+          >🌟 Bookmark</a
+        >
+      </div>
+    </div>
+  </nav>
 
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">HTTISHERE&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
+  
+  <nav class="navbar-mobile" id="nav-mobile">
+    <div class="container">
+      <div class="navbar-header">
+        <div>
+          <a href="/">HTTISHERE&#39;s Blog</a
+          ><a id="mobile-toggle-theme">·&nbsp;Light</a>
         </div>
-    </nav>
-
+        <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+      </div>
+      <div class="menu" id="mobile-menu">
+        
+        <a class="menu-item" href="/archives">Posts</a>
+        
+        <a class="menu-item" href="/category">Categories</a>
+        
+        <a class="menu-item" href="/tag">Tags</a>
+        
+        <a class="menu-item" href="/about">About</a>
+        
+      </div>
+    </div>
+  </nav>
 </header>
 <script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
+  var mobileBtn = function f() {
+    var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+    var mobileMenu = document.getElementById("mobile-menu");
+    if (toggleMenu.classList.contains("active")) {
+      toggleMenu.classList.remove("active");
+      mobileMenu.classList.remove("active");
+    } else {
+      toggleMenu.classList.add("active");
+      mobileMenu.classList.add("active");
     }
+  };
+  function addFav() {
+    var title = document.title;
+    var URL = document.URL;
+    try {
+      window.external.addFavorite(URL, title);
+    } catch (e) {
+      try {
+        window.sidebar.addPanel(title, URL, "");
+      } catch (e) {
+        alert("由于浏览器的安全设置\n可以使用Ctrl+D或者Command+D进行手动收藏");
+      }
+    }
+  }
 </script>
+
         <div class="main">
             <div class="post-wrap archive">
     
@@ -112,6 +135,24 @@
 
         
             <h3>2020</h3>
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/2020/03/24/android-dev-env/">搭建Android开发环境</a>
+            <span class="archive-item-date">三月 24, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/2020/03/24/vultr-ss/">vultr搭建shadowsock</a>
+            <span class="archive-item-date">三月 24, 2020</span>
+        </article>
+    
+        
+
         
 
         <article class="archive-item">
@@ -227,24 +268,6 @@
         <article class="archive-item">
             <a class="archive-item-link" href="/2019/11/26/yuque/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8canvas%E7%BB%98%E5%9B%BE%EF%BC%8C%E6%97%A0%E6%B3%95%E7%BB%98%E5%88%B6%E4%BB%A5%E5%8F%8Afail%20canvas%20is%20empty%E9%97%AE%E9%A2%98/">微信小程序自定义组件使用canvas绘图，无法绘制以及fail canvas is empty问题</a>
             <span class="archive-item-date">十一月 26, 2019</span>
-        </article>
-    
-        
-
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2019/06/05/yuque/mpvue%20%E5%BC%95%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9UI%E7%BB%84%E4%BB%B6%E5%BA%93/">mpvue 引入第三方UI组件库</a>
-            <span class="archive-item-date">六月 5, 2019</span>
-        </article>
-    
-        
-
-        
-
-        <article class="archive-item">
-            <a class="archive-item-link" href="/2019/03/08/yuque/Weekly%20sharing%2002%EF%BC%8820190304%EF%BC%89/">Weekly sharing 02（20190304）</a>
-            <span class="archive-item-date">三月 8, 2019</span>
         </article>
     
     
